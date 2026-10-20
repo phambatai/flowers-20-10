@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
   <script src="./card.js" defer></script>
+  <script src="./album.js" defer></script>
 </head>
 <body>
   <main>
@@ -23,6 +24,7 @@
     <div class="gift-layout">
       <section class="scene-column" aria-label="Hoa và những lời chúc 20/10">
 
+
         <div class="gift-visuals">
           <div class="bouquet-composition">
             <div id="bouquetStageWrapper" role="button" tabindex="0"
@@ -31,11 +33,12 @@
               <canvas id="bouquetCanvas" aria-hidden="true"></canvas>
             </div>
             <button class="envelope-button" id="openCard" type="button" aria-haspopup="dialog" aria-controls="greetingCard" aria-expanded="false" hidden>
-              <span class="envelope" aria-hidden="true"><span class="envelope-letter">Gửi em</span><span class="envelope-seal">♡</span></span>
+              <span class="envelope-letter">Gửi em</span>
               <span class="envelope-caption">Có một tấm thiệp cho em</span>
               <span class="envelope-action">Mở thiệp</span>
             </button>
           </div>
+
         </div>
 
         <footer class="scene-footer">
@@ -56,7 +59,7 @@
             <p id="cardMessage" class="letter-message"></p>
             <div class="letter-signoff"><p>Với thật nhiều thương mến,</p><p id="cardSender" class="letter-signature"></p></div>
             <div class="letter-fold" aria-hidden="true"></div>
-            <div class="letter-actions"><button id="editCard" class="text-button" type="button">Viết lời chúc riêng <span aria-hidden="true">✎</span></button></div>
+            <div class="letter-actions"><button id="viewAlbum" class="text-button" type="button" aria-controls="memoryAlbum">Xem album kỷ niệm <span aria-hidden="true">♡</span></button><button id="editCard" class="text-button" type="button">Viết lời chúc riêng <span aria-hidden="true">✎</span></button></div>
           </div>
           <form id="cardEditor" hidden>
             <p class="editor-intro">Một tấm thiệp mang lời của bạn.</p>
@@ -74,7 +77,7 @@
         </div>
       </dialog>
     </div>
-
+    
     <noscript><p class="noscript-message">Bật JavaScript để ngắm hoa nở và mở thiệp 20/10 nhé.</p></noscript>
   </main>
 </body>
